@@ -11,9 +11,6 @@
   </head>
   <body>
     <!--================Header Menu Area =================-->
-    {% for post in fresh_posts %}
-    {{post.image_url}}
-    {% endfor %}
     <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -108,7 +105,7 @@
                 </div>
                 <div class="details mt-20">
                   <h3>{{post.title}}</h3>
-                  <p>{{post.text}}</p>
+                  <p>{{post.text|truncatechars_html:200}}</p>
                   <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
                 </div>
               </div>
